@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravity Falls | Misterios del bosque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado" id="inicio">
+    <video class="video-fondo" autoplay loop muted playsinline>
+        <source src="imagen/bill.mp4" type="video/mp4">
+    </video>
+
+    <div class="contenido-encabezado">
+        <h1>GRAVITY FALLS</h1>
+        <p>El verano donde nada es lo que parece...</p>
+    </div>
+</header>
+
+    <!-- MENÚ -->
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#historia">La historia</a>
+        <a href="#personajes">Personajes</a>
+        <a href="#misterios">Misterios</a>
+        <a href="#curiosidades">Curiosidades</a>
+        <a href="#favorito">Mi personaje favorito</a>
+        <a href="#galeria">Galeria</a>
+        <a href="raromagedon.html">Raromagedón</a>
+    </nav>
+
+    <main>
+
+        <!-- HISTORIA -->
+        <section id="historia" class="historia seccion">
+            <div class="texto-historia">
+                <span class="etiqueta-seccion">UN PUEBLO NADA NORMAL</span>
+                <h2>¿Qué es Gravity Falls?</h2>
+
+                <p>
+                Gravity Falls narra las vacaciones de los mellizos Dipper y Mabel Pines en un pueblo de Oregón repleto de
+                secretos paranormales. Tras encontrar un misterioso diario en el bosque, los hermanos descubren que las 
+                criaturas mágicas y las anomalías del lugar son reales. Junto a su tío abuelo Stan y sus amigos de «La Cabaña del Misterio», 
+                los niños investigan estos enigmas mientras se enfrentan a Bill Cipher, un peligroso demonio interdimensional que planea 
+                desatar el apocalipsis antes de que termine el verano.
+                </p>
+            </div>
+
+            <div class="imagen-historia">
+                <!-- Agrega una imagen del bosque o del pueblo -->
+                <img src="imagen/gravityfalls.jpg" alt="Gravity Falls">
+            </div>
+
+            <div class="circulo decoracion-historia"></div>
+        </section>
+
+        <!-- PERSONAJES -->
+        <section id="personajes" class="seccion personajes">
+            <span class="etiqueta-seccion">NUESTROS PROTAGONISTAS</span>
+            <h2>Conoce a los personajes</h2>
+
+            <p class="introduccion">
+                Cada uno tiene una personalidad diferente y un papel
+                importante en las aventuras de Gravity Falls.
+            </p>
+
+            <div class="rejilla-personajes">
+
+                <article class="tarjeta dipper">
+                    <div class="marco-imagen">
+                        <img src="imagen/dipperpines.jpg" alt="Dipper Pines">
+                    </div>
+                    <h3>Dipper Pines</h3>
+                    <p>
+                        Es inteligente, curioso y aventurero. Siempre intenta
+                        encontrar respuestas a los misterios del pueblo.
+                    </p>
+                     <button class="boton-secreto"
+                        onclick="mostrarSecreto ('secreto-dipper', this)">
+                    Descubrir secreto</button>
+                    <p id="secreto-dipper" class="secreto-oculto">
+                        Dipper encuentra el Diario 3, que contiene informacion sobre criaturas extrañas
+                        y misterios de Gravity Falls.
+                    </p>
+                </article>
+
+                <article class="tarjeta mabel">
+                    <div class="marco-imagen">
+                        <img src="imagen/mabelpines.jpg" alt="Mabel Pines">
+
+                    </div>
+                    <h3>Mabel Pines</h3>
+                    <p>
+                        Es alegre, creativa y espontánea. Le encanta divertirse
+                        y vivir aventuras junto a su hermano.
+                    </p>
+                     <button class="boton-secreto"
+                        onclick="mostrarSecreto ('secreto-mabel', this)">
+                    Descubrir secreto</button>
+                    <p id="secreto-mabel" class="secreto-oculto">
+                       Su cerdito mascota se llama Pato y es uno de sus compañeros mas queridos.
+                    </p>
+                </article>
+
+                <article class="tarjeta stan">
+                    <div class="marco-imagen">
+                        <img src="imagen/tiostan.jpg" alt="Tío abuelo Stan">
+                       
+                    </div>
+                    <h3>Tío abuelo Stan</h3>
+                    <p>
+                        Es el dueño de la Cabaña del Misterio. Le gusta ganar
+                        dinero y ocultar algunos secretos.
+                    </p>
+                      <button class="boton-secreto"
+                        onclick="mostrarSecreto ('secreto-stan', this)">
+                    Descubrir secreto</button>
+                    <p id="secreto-stan" class="secreto-oculto">
+                       Stan paso años trabajando para reparar la maquina que le permitiria recuperar a su gemelo, Ford, despues
+                       de haberlo enviado accidentalmente a otra dimension.
+                    </p>
+                </article>
+
+                <article class="tarjeta wendy">
+                    <div class="marco-imagen">
+                        <img src="imagen/wendy.jpg" alt="Wendy Corduroy">
+                        
+                    </div>
+                    <h3>Wendy Corduroy</h3>
+                    <p>
+                        Es relajada, valiente y divertida. Trabaja en la
+                        Cabaña del Misterio y acompaña al grupo.
+                    </p>
+                     <button class="boton-secreto"
+                        onclick="mostrarSecreto ('secreto-wendy', this)">
+                    Descubrir secreto</button>
+                    <p id="secreto-wendy" class="secreto-oculto">
+                       Wendy esta representada por el simbolo de hielo en la rueda relacionada con la derrota de Bill.
+                    </p>
+                </article>
+
+                <article class="tarjeta soos">
+                    <div class="marco-imagen">
+                        <img src="imagen/soos.jpg" alt="Soos Ramírez">
+                         
+                    </div>
+                    <h3>Soos Ramírez</h3>
+                    <p>
+                        Es amable, gracioso y leal. Ayuda a Stan y siempre
+                        está dispuesto a apoyar a sus amigos.
+                    </p>
+                     <button class="boton-secreto"
+                        onclick="mostrarSecreto ('secreto-soos', this)">
+                    Descubrir secreto</button>
+                    <p id="secreto-soos" class="secreto-oculto">
+                      Trabaja en la Cabaña del misterio y ve a Stan como su figura paterna.
+                    </p>
+                </article>
+
+                <article class="tarjeta bill">
+                    <div class="marco-imagen">
+                        <img src="imagen/bill.jpg" alt="Bill Cipher">
+                        
+                    </div>
+                    <h3>Bill Cipher</h3>
+                    <p>
+                        Es una entidad sobrenatural muy poderosa que representa
+                        una de las mayores amenazas de la historia.
+                    </p>
+                     <button class="boton-secreto"
+                        onclick="mostrarSecreto ('secreto-bill', this)">
+                    Descubrir secreto</button>
+                    <p id="secreto-bill" class="secreto-oculto">
+                       Puede entrar a los sueños de las personas
+                    </p>
+                </article>
+
+            </div>
+        </section>
+        
+        <!-- VIDEOS-->
+         <section id="videos" class="seccion-videos">
+    <div class="contenedor-videos">
+
+        <div class="video-tarjeta">
+            <video controls>
+                <source src="imagen/cortodipper.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="video-tarjeta">
+            <video controls>
+                <source src="imagen/cortomabel.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="video-tarjeta">
+            <video controls>
+                <source src="imagen/introbill.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <section id="tabla-personajes">
+    <h2>Tabla comparativa de personajes</h2>
+
+    <div class="contenedor-tabla">
+        <table class="tabla-personajes">
+            <thead>
+                <tr>
+                    <th>Personaje</th>
+                    <th>Tipo</th>
+                    <th>Habilidad</th>
+                    <th>Fortaleza</th>
+                    <th>Personalidad</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Dipper Pines</td>
+                    <td>Humano</td>
+                    <td>Investigar misterios</td>
+                    <td>Inteligencia y observación</td>
+                    <td>Curioso, analítico y valiente</td>
+                </tr>
+
+                <tr>
+                    <td>Mabel Pines</td>
+                    <td>Humana</td>
+                    <td>Crear manualidades</td>
+                    <td>Creatividad y optimismo</td>
+                    <td>Alegre, divertida y cariñosa</td>
+                </tr>
+
+                <tr>
+                    <td>Stanley Pines</td>
+                    <td>Humano</td>
+                    <td>Negociar y hacer negocios</td>
+                    <td>Ingenio y perseverancia</td>
+                    <td>Astuto, bromista y protector</td>
+                </tr>
+
+                <tr>
+                    <td>Stanford Pines</td>
+                    <td>Humano</td>
+                    <td>Investigación científica</td>
+                    <td>Conocimiento e inteligencia</td>
+                    <td>Serio, curioso y decidido</td>
+                </tr>
+
+                <tr>
+                    <td>Soos Ramírez</td>
+                    <td>Humano</td>
+                    <td>Reparar objetos</td>
+                    <td>Lealtad y habilidad técnica</td>
+                    <td>Amable, gracioso y servicial</td>
+                </tr>
+
+                <tr>
+                    <td>Wendy Corduroy</td>
+                    <td>Humana</td>
+                    <td>Supervivencia y actividades al aire libre</td>
+                    <td>Valentía y habilidad física</td>
+                    <td>Relajada, independiente y valiente</td>
+                </tr>
+
+                <tr>
+                    <td>Bill Cipher</td>
+                    <td>Entidad extradimensional</td>
+                    <td>Manipular la realidad</td>
+                    <td>Poderes sobrenaturales e inteligencia</td>
+                    <td>Manipulador, caótico y arrogante</td>
+                </tr>
+
+                <tr>
+                    <td>Pacifica Northwest</td>
+                    <td>Humana</td>
+                    <td>Organización y estrategia social</td>
+                    <td>Seguridad y capacidad de adaptación</td>
+                    <td>Orgullosa, competitiva y cambiante</td>
+                </tr>
+
+                <tr>
+                    <td>Gideon Gleeful</td>
+                    <td>Humano</td>
+                    <td>Manipulación y actuación</td>
+                    <td>Persuasión y astucia</td>
+                    <td>Ambicioso, manipulador y rencoroso</td>
+                </tr>
+
+                <tr>
+                    <td>McGucket</td>
+                    <td>Humano</td>
+                    <td>Inventar máquinas</td>
+                    <td>Ingenio y creatividad técnica</td>
+                    <td>Excéntrico, inteligente y creativo</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+        <!-- MISTERIOS -->
+        <section id="misterios" class="seccion misterios">
+            <span class="etiqueta-seccion">NO TODO ES LO QUE PARECE</span>
+            <h2>Los grandes misterios</h2>
+
+            <div class="rejilla-misterios">
+
+                <article class="misterio">
+                    <div class="icono-misterio">📓</div>
+                    <h3>Los diarios</h3>
+                    <p>
+                        Contienen información sobre criaturas, anomalías
+                        y secretos ocultos en el pueblo.
+                    </p>
+                </article>
+
+                <article class="misterio">
+                    <div class="icono-misterio">🌲</div>
+                    <h3>El bosque</h3>
+                    <p>
+                        Entre los árboles y senderos se esconden seres
+                        extraños y sucesos inexplicables.
+                    </p>
+                </article>
+
+                <article class="misterio">
+                    <div class="icono-misterio">👁️</div>
+                    <h3>Bill Cipher</h3>
+                    <p>
+                        Sus intenciones y habilidades lo convierten
+                        en uno de los enigmas más importantes.
+                    </p>
+                </article>
+
+            </div>
+
+            <div class="rombo decoracion-misterio"></div>
+        </section>
+
+        <!-- CURIOSIDADES -->
+        <section id="curiosidades" class="seccion curiosidades">
+            <span class="etiqueta-seccion">DATOS INTERESANTES</span>
+            <h2>¿Sabías que...?</h2>
+
+            <div class="lista-curiosidades">
+
+                <article class="curiosidad">
+                    <div class="numero">01</div>
+                    <p>
+                        Dipper y Mabel estan basados directamente en el creador de la serie. Alex Hirsch, y en su hermana gemela, Ariel.
+                    </p>
+                </article>
+
+                <article class="curiosidad">
+                    <div class="numero">02</div>
+                    <p>
+                        El apodo "Dipper" viene de su marca de nacimiento en la frente, que parece la Osa Mayor(Big Dipper.) Su nombre real es Mason.
+                    </p>
+                </article>
+
+                <article class="curiosidad">
+                    <div class="numero">03</div>
+                    <p>
+                        La serie esconde mensajes y símbolos que
+                        los espectadores pueden intentar descifrar.
+                    </p>
+                </article>
+
+                <article class="curiosidad">
+                    <div class="numero">04</div>
+                    <p>
+                      Alex Hirsch hace la voz de varios personajes.
+                    </p>
+                </article>
+
+                 <article class="curiosidad">
+                    <div class="numero">05</div>
+                    <p>
+                       La Cabaña no es solo una atraccion turistica, tambien sirve como escenario para varios secretos de la familia Pines.
+                    </p>
+                </article>
+
+                 <article class="curiosidad">
+                    <div class="numero">06</div>
+                    <p>
+                      Despues del final de la serie, los fans participaron en una busqueda internacional de una estatua de Bill Cipher. 
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- MI OPINIÓN -->
+<section id="opinion" class="seccion opinion">
+    <h2>Mi opinión sobre Gravity Falls</h2>
+
+    <article class="tarjeta-opinion">
+        <h3>¿Por qué me gusta?</h3>
+        <p>
+            Gravity Falls es una serie que me gusta porque combina el misterio,
+            la comedia y la aventura. Cada episodio tiene algo interesante y
+            muchas veces aparecen pistas que hacen que quiera descubrir qué
+            está pasando.
+        </p>
+
+        <p>
+        Me gustan los personajes porque cada uno tiene una personalidad diferente. Tambien me parece interesante como Dipper y Mabel enfrentan 
+        misterios y se ayudan durante sus aventuras.
+        </p>
+        <p> Dipper es mi personaje favorito porque siempre quiere descubrir que secretos esconde Gravity Falls y siempre esta tratando de buscar respuestas a cada suceso extraño
+            que sucede en el pueblo.
+        </p>
+
+        <h3>¿Qué enseñanza me deja?</h3>
+        <p>
+            La serie me enseña que es importante confiar en las personas que
+            queremos, trabajar en equipo y tener curiosidad por aprender cosas
+            nuevas. También muestra que las apariencias pueden engañar y que
+            no todo es lo que parece.
+        </p>
+    </article>
+</section>
+
+<!-- MI PERSONAJE FAVORITO -->
+<section id="favorito" class="seccion favorito">
+    <h2>Mi personaje favorito</h2>
+
+    <div class="dipper-contenedor">
+        <div class="dipper-imagen">
+            <img src="imagen/dipper.jpg" alt="Dipper Pines">
+        </div>
+
+        <article class="dipper-informacion">
+            <h3>Dipper Pines</h3>
+
+            <p>
+                Dipper Pines es uno de los protagonistas de Gravity Falls.
+                Es un chico curioso, inteligente y observador que siempre
+                intenta descubrir los secretos del pueblo.
+            </p>
+
+            <h3>Habilidades</h3>
+            <ul>
+                <li>Resolver misterios y acertijos.</li>
+                <li>Encontrar pistas y analizar situaciones.</li>
+                <li>Investigar criaturas y fenómenos extraños.</li>
+                <li>Crear planes para enfrentar problemas.</li>
+            </ul>
+
+            <h3>Características</h3>
+            <p>
+                Es valiente, curioso, inteligente y perseverante. Aunque
+                a veces siente miedo o duda de sí mismo, intenta encontrar
+                soluciones y proteger a las personas que quiere.
+            </p>
+
+            <h3>¿Por qué es mi favorito?</h3>
+            <p>
+                Dipper es mi personaje favorito porque es inteligente,
+                le gusta investigar y nunca se rinde fácilmente cuando
+                quiere descubrir la verdad. Me gusta su forma de enfrentar
+                los misterios y aprender de cada aventura.
+            </p>
+        </article>
+    </div>
+</section>
+
+<!-- GALERÍA DE GRAVITY FALLS -->
+<section id="galeria" class="seccion galeria">
+    <h2>Galería de Gravity Falls</h2>
+    <p>Momentos, personajes y misterios de un verano inolvidable.</p>
+
+    <div class="galeria-grid">
+        <img src="imagen/galeria1.jpg" alt="Gravity Falls imagen 1" loading="lazy">
+        <img src="imagen/galeria2.jpg" alt="Gravity Falls imagen 2" loading="lazy">
+        <img src="imagen/galeria3.jpg" alt="Gravity Falls imagen 3" loading="lazy">
+        <img src="imagen/galeria4.jpg" alt="Gravity Falls imagen 4" loading="lazy">
+        <img src="imagen/galeria5.jpg" alt="Gravity Falls imagen 5" loading="lazy">
+        <img src="imagen/galeria6.jpg" alt="Gravity Falls imagen 6" loading="lazy">
+        <img src="imagen/galeria7.jpg" alt="Gravity Falls imagen 7" loading="lazy">
+        <img src="imagen/galeria8.jpg" alt="Gravity Falls imagen 8" loading="lazy">
+        <img src="imagen/galeria9.jpg" alt="Gravity Falls imagen 9" loading="lazy">
+        <img src="imagen/galeria10.jpg" alt="Gravity Falls imagen 10" loading="lazy">
+        <img src="imagen/galeria11.jpg" alt="Gravity Falls imagen 11" loading="lazy">
+        <img src="imagen/galeria12.jpg" alt="Gravity Falls imagen 12" loading="lazy">
+        <img src="imagen/galeria13.jpg" alt="Gravity Falls imagen 13" loading="lazy">
+        <img src="imagen/galeria14.jpg" alt="Gravity Falls imagen 14" loading="lazy">
+        <img src="imagen/galeria15.jpg" alt="Gravity Falls imagen 15" loading="lazy">
+    </div>
+</section>
+
+        <!-- MENSAJE FINAL -->
+        <section class="final">
+            <div class="triangulo-final"></div>
+            <h2>El misterio nunca termina...</h2>
+            <p>
+                En Gravity Falls, cada secreto descubierto
+                puede llevarte a uno todavía más extraño.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Luz Elena Morales Gonzalez | 502-B</p>
+        <p>GRAVITY FALLS</p>
+        <P>2026</P>
+        <p>HTML | CSS | JAVASCRIPT | IMAGENES | VIDEOS</p>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

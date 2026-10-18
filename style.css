@@ -1,0 +1,883 @@
+/* CONFIGURACIÓN GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #edf0df;
+    color: #26382c;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* PORTADA */
+header {
+    min-height: 440px;
+    padding: 75px 20px;
+    text-align: center;
+    color: white;
+    background:
+        radial-gradient(circle at 50% 30%, #38583d, transparent 55%),
+        linear-gradient(135deg, #142c24, #243b30 55%, #171f27);
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    position: relative;
+    z-index: 2;
+    margin: 10px 0;
+    font-size: clamp(36px, 7vw, 68px);
+    letter-spacing: 5px;
+    color: #f8d84b;
+    text-shadow: 4px 5px 0 #342c24;
+}
+
+header p {
+    position: relative;
+    z-index: 2;
+}
+
+.etiqueta {
+    color: #d9e6c2;
+    font-size: 13px;
+    letter-spacing: 4px;
+}
+
+.frase {
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+/* BOTONES */
+.boton {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    padding: 12px 24px;
+    background-color: #f8d84b;
+    color: #263326;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* FIGURAS DECORATIVAS DE LA PORTADA */
+.triangulo-bill {
+    width: 0;
+    height: 0;
+    border-left: 65px solid transparent;
+    border-right: 65px solid transparent;
+    border-bottom: 115px solid #f8d84b;
+    margin: 0 auto 20px;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 0 20px #f8d84b55);
+}
+
+.triangulo-bill::after {
+    content: "";
+    position: absolute;
+    left: -24px;
+    top: 44px;
+    width: 48px;
+    height: 27px;
+    background-color: #fff8c9;
+    border-radius: 50%;
+    clip-path: ellipse(50% 50%);
+}
+
+.estrella {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-color: #f8d84b;
+    clip-path: polygon(
+        50% 0, 62% 35%, 100% 50%,
+        62% 65%, 50% 100%, 38% 65%,
+        0 50%, 38% 35%
+    );
+}
+
+.estrella1 {
+    top: 70px;
+    left: 15%;
+}
+
+.estrella2 {
+    top: 110px;
+    right: 17%;
+    transform: scale(1.5);
+}
+
+.circulo-flotante {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 2px solid #ffffff18;
+    border-radius: 50%;
+    right: -65px;
+    bottom: -70px;
+}
+
+/* MENÚ */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 14px;
+    background-color: #202c28;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 0;
+    font-size: 14px;
+    transition: 0.3s;
+    border: 2px solid #f8d84b;
+    background-color: #26382c;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #52784e;
+    color: #fff3a5;
+}
+
+/* CONTENIDO PRINCIPAL */
+main {
+    width: 92%;
+    max-width: 1150px;
+    margin: 35px auto;
+}
+
+.seccion {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 35px;
+    padding: 32px;
+    border-radius: 18px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 18px #26382c12;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 1.3;
+}
+
+.etiqueta-seccion {
+    color: #7c6ac4;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* HISTORIA */
+.historia {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 30px;
+    background: linear-gradient(135deg, #ffffff, #e0ead8);
+}
+
+.texto-historia {
+    position: relative;
+    z-index: 2;
+}
+
+.texto-historia h2 {
+    color: #31543a;
+}
+
+.imagen-historia {
+    height: 320px;
+    background-color: #b8c9aa;
+    border: 5px solid white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px #00000020;
+}
+
+.imagen-historia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.decoracion-historia {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 15px solid #7da16b22;
+    border-radius: 50%;
+    right: -20px;
+    bottom: -25px;
+}
+
+/* PERSONAJES */
+.personajes h2 {
+    color: #31543a;
+}
+
+.introduccion {
+    color: #647064;
+    margin-bottom: 25px;
+}
+
+.rejilla-personajes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.tarjeta {
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #f4f5eb;
+    border: 1px solid #dfe4d4;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px #26382c20;
+}
+
+.marco-imagen {
+    height: 220px;
+    overflow: hidden;
+    border-radius: 11px;
+    background: linear-gradient(145deg, #d8e2cb, #b9c8ac);
+}
+
+.marco-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover img {
+    transform: scale(1.05);
+}
+
+.tarjeta h3 {
+    margin-bottom: 5px;
+    color: #35543b;
+}
+
+.tarjeta p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #535d51;
+}
+
+/* COLORES INDIVIDUALES DE PERSONAJES */
+.dipper {
+    border-top: 5px solid #4c91d1;
+}
+
+.mabel {
+    border-top: 5px solid #ef82b4;
+}
+
+.stan {
+    border-top: 5px solid #bf3939;
+}
+
+.wendy {
+    border-top: 5px solid #579b5b;
+}
+
+.soos {
+    border-top: 5px solid #e5b83f;
+}
+
+.bill {
+    border-top: 5px solid #f0ca38;
+    background-color: #fff9df;
+}
+
+/* MISTERIOS */
+.misterios {
+    color: white;
+    background:
+        radial-gradient(circle at 90% 10%, #5e4b8c, transparent 35%),
+        linear-gradient(135deg, #1e3329, #263b30 55%, #352a48);
+}
+
+.misterios h2 {
+    color: #f7dc63;
+}
+
+.misterios .etiqueta-seccion {
+    color: #c4b8ff;
+}
+
+.rejilla-misterios {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.misterio {
+    padding: 22px;
+    border: 1px solid #ffffff25;
+    border-radius: 15px;
+    background-color: #ffffff0d;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.misterio:hover {
+    background-color: #ffffff17;
+    transform: translateY(-4px);
+}
+
+.icono-misterio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background-color: #f7dc6330;
+    font-size: 35px;
+}
+
+.misterio h3 {
+    color: #f7dc63;
+}
+
+.misterio p {
+    color: #e0e6dd;
+    font-size: 14px;
+}
+
+.rombo {
+    width: 38px;
+    height: 38px;
+    background-color: #a994ed;
+    transform: rotate(45deg);
+}
+
+.decoracion-misterio {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    opacity: 0.3;
+}
+
+/* CURIOSIDADES */
+.curiosidades h2 {
+    color: #5a438f;
+}
+
+.lista-curiosidades {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 25px;
+}
+
+.curiosidad {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 17px;
+    border-radius: 12px;
+    background-color: #f0edf9;
+}
+
+.curiosidad p {
+    margin: 0;
+}
+
+.numero {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: #7764b0;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* CIERRE */
+.final {
+    position: relative;
+    overflow: hidden;
+    padding: 45px 25px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #654d92, #3a2b59);
+    border-radius: 18px;
+}
+
+.final h2 {
+    color: #ffe36c;
+}
+
+.final p {
+    margin-bottom: 25px;
+}
+
+.triangulo-final {
+    width: 0;
+    height: 0;
+    border-left: 32px solid transparent;
+    border-right: 32px solid transparent;
+    border-bottom: 55px solid #f8d84b;
+    margin: 0 auto;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    padding: 25px;
+    background-color: #202c28;
+    color: #e4eadf;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* ADAPTACIÓN A CELULARES */
+@media (max-width: 850px) {
+    .rejilla-personajes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .rejilla-misterios {
+        grid-template-columns: 1fr;
+    }
+
+    .historia {
+        grid-template-columns: 1fr;
+    }
+
+    .imagen-historia {
+        height: 260px;
+    }
+}
+
+@media (max-width: 550px) {
+    header {
+        padding: 55px 15px;
+    }
+
+    header h1 {
+        letter-spacing: 2px;
+    }
+
+    nav {
+        position: static;
+        gap: 4px;
+    }
+
+    nav a {
+        padding: 7px 9px;
+        font-size: 12px;
+    }
+
+    main {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .seccion {
+        padding: 20px;
+        margin-bottom: 22px;
+    }
+
+    .seccion h2 {
+        font-size: 25px;
+    }
+
+    .rejilla-personajes,
+    .lista-curiosidades {
+        grid-template-columns: 1fr;
+    }
+
+    .marco-imagen {
+        height: 250px;
+    }
+}
+.video-bill {
+    width: 70%;
+    max-width:80%;
+    height: 50;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+.encabezado {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    background-color: #142b20;
+}
+
+/* Video de fondo */
+.video-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    z-index: 0;
+    opacity: 0.9;
+}
+
+/* Título y texto encima del video */
+.contenido-encabezado {
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+}
+
+.contenido-encabezado h1 {
+    color: #bc9f1e;
+    font-size: 55px;
+    text-shadow: 3px 3px 6px black;
+}
+
+.contenido-encabezado p {
+    color: rgb(12, 80, 3);
+    font-size: 20px;
+    text-shadow: 2px 2px 5px black;
+    font-weight: bold;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+/* PENTÁGONOS DE LOS GRANDES MISTERIOS */
+.misterio {
+    clip-path: polygon(
+        50% 0%,
+        100% 38%,
+        82% 100%,
+        18% 100%,
+        0% 38%
+    );
+
+    border-radius: 0;
+    padding: 45px 25px;
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.seccion-videos {
+    padding: 50px 7%;
+    text-align: center;
+    background-color: #142b20;
+    color: white;
+}
+
+.seccion-videos h2 {
+    color: #f5d547;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.contenedor-videos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.video-tarjeta {
+    background-color: #263d30;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #f5d547;
+}
+
+.video-tarjeta video {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.video-tarjeta h3 {
+    color: #f5d547;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 800px) {
+    .contenedor-videos {
+        grid-template-columns: 1fr;
+    }
+}
+/* MI OPINIÓN */
+.opinion {
+    background: linear-gradient(135deg, #252b25, #45345b);
+    border-radius: 25px;
+    padding: 30px;
+    margin-top: 35px;
+}
+
+.opinion h2 {
+    color: #f4d35e;
+    text-align: center;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.tarjeta-opinion {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 2px solid #f4d35e;
+    border-radius: 15px;
+    padding: 25px;
+    color: #fff;
+    line-height: 1.8;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-opinion:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-opinion h3 {
+    color: #f4d35e;
+}
+/* PERSONAJE FAVORITO: DIPPER */
+.favorito {
+    background: linear-gradient(135deg, #202a35, #45345b);
+    border: 2px solid #f4d35e;
+    border-radius: 25px;
+    padding: 30px;
+}
+
+.favorito h2 {
+    text-align: center;
+    color: #f4d35e;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.dipper-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.dipper-imagen {
+    flex: 1;
+    text-align: center;
+}
+
+.dipper-imagen img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    border: 3px solid #f4d35e;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.dipper-imagen img:hover {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+.dipper-informacion {
+    flex: 2;
+    color: #fff;
+    line-height: 1.7;
+}
+
+.dipper-informacion h3 {
+    color: #f4d35e;
+}
+
+.dipper-informacion li {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 700px) {
+    .dipper-contenedor {
+        flex-direction: column;
+    }
+
+    .dipper-informacion {
+        width: 100%;
+    }
+}
+/* GALERÍA */
+.galeria {
+    text-align: center;
+    background: linear-gradient(135deg, #202b24, #39314d);
+    border-radius: 25px;
+    padding: 30px;
+}
+
+.galeria h2 {
+    color: #f4d35e;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.galeria > p {
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border: 2px solid #f4d35e;
+    border-radius: 15px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(244, 211, 94, 0.4);
+}
+
+@media (max-width: 700px) {
+    .galeria-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .galeria-grid img {
+        height: 160px;
+    }
+}
+
+@media (max-width: 400px) {
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* BOTONES DE PERSONAJES */
+.boton-secreto {
+    background: #f4d35e;
+    color: #222;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.boton-secreto:hover {
+    background: #ffe98a;
+    transform: scale(1.07);
+}
+
+.secreto-oculto {
+    display: none;
+    background: #c3b736;
+    color: white;
+    border-left: 4px solid #f4d35e;
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 12px;
+    animation: aparecerSecreto 0.4s ease;
+}
+
+.secreto-oculto.visible {
+    display: block;
+}
+
+@keyframes aparecerSecreto {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* TABLA COMPARATIVA DE PERSONAJES */
+#tabla-personajes {
+    padding: 40px 20px;
+    color: #f5f5f5;
+}
+
+#tabla-personajes h2 {
+    text-align: center;
+    color: #ffcc00;
+    margin-bottom: 25px;
+}
+
+.contenedor-tabla {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabla-personajes {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #181818;
+}
+
+.tabla-personajes th,
+.tabla-personajes td {
+    border: 1px solid #8c2525;
+    padding: 12px;
+    text-align: left;
+}
+
+.tabla-personajes th {
+    background-color: #8c1717;
+    color: #ffcc00;
+}
+
+.tabla-personajes tbody tr:nth-child(even) {
+    background-color: #292929;
+}
+
+.tabla-personajes tbody tr:hover {
+    background-color: #42321a;
+}
