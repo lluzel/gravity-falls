@@ -167,7 +167,7 @@ body {
 
 .bloque-raro {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     padding: 35px;
     margin-bottom: 30px;
 
@@ -217,7 +217,7 @@ body {
 .imagen-raro img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.5s;
 }
 
@@ -254,7 +254,7 @@ body {
 .bill-imagen img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.4s;
 }
 
