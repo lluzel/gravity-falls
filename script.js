@@ -9,3 +9,15 @@ function mostrarSecreto(id, boton) {
         boton.textContent = "Descubrir secreto";
     }
 }
+// BOTÓN PARA ENTRAR A GRAVITY FALLS
+const botonEntrar = document.getElementById("botonEntrar");
+const portada = document.getElementById("portada");
+
+botonEntrar.addEventListener("click", function () {
+    portada.classList.add("oculta");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
